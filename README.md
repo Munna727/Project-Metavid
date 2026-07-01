@@ -154,6 +154,11 @@ User Uploads Video
 
 ![Upload](Screenshots/feat.jpg)
 
+![Upload](Screenshots/ldf.jpg)
+
+![Upload](Screenshots/fdf.jpg)
+
+![Upload](Screenshots/sdf.jpg)
 
 ![Dashboard](Screenshots/footer.jpg)
 
