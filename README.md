@@ -1,143 +1,274 @@
-[README.md](https://github.com/user-attachments/files/28780142/README.md)
-<div align="center">
-
+[README .md](https://github.com/user-attachments/files/29534053/README.md)
 # 🎬 MetaVid
+
 ### Intelligent Video Analysis Platform
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
-[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org)
-[![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com)
-[![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)](https://cloudinary.com)
+**Python • Flask • OpenCV • Google Cloud Video Intelligence API • Cloudinary**
 
-*Transform raw video content into structured, actionable intelligence using AI and cloud technologies.*
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Flask-Backend-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+  <img src="https://img.shields.io/badge/Google%20Cloud-Video%20Intelligence%20API-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud Video Intelligence API">
+  <img src="https://img.shields.io/badge/Cloudinary-Cloud%20Delivery-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white" alt="Cloudinary">
+</p>
 
-</div>
+<p>
+  <img src="https://img.shields.io/badge/status-active-success?style=flat-square" alt="Status">
+  <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome">
+</p>
+
+Transform raw video content into structured, actionable intelligence using AI-powered computer vision and cloud technologies.
+
+---
+
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [System Workflow](#️-system-workflow)
+- [Workflow Explanation](#-workflow-explanation)
+- [Screenshots](#-screenshots)
+- [Applications](#-applications)
+- [Key Highlights](#-key-highlights)
+- [Challenges Faced](#️-challenges-faced)
+- [Future Enhancements](#-future-enhancements)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Author](#-author)
 
 ---
 
 ## 📌 Overview
 
-**MetaVid** is an AI-powered video analysis platform that automatically extracts meaningful insights from uploaded videos. The system combines computer vision techniques with cloud-based video intelligence services to identify important visual elements and events within a video.
+MetaVid is an AI-powered video analysis platform that automatically extracts meaningful insights from uploaded videos. It leverages **Google Cloud Video Intelligence API**, **OpenCV**, and **Cloudinary** to detect important visual elements and events within a video.
 
-The platform helps users analyze video content efficiently by detecting scene transitions, faces, logos, and objects — transforming raw video data into structured, actionable information.
+The platform analyzes uploaded videos, annotates detected objects with bounding boxes and labels, and delivers the processed video through Cloudinary, allowing users to view AI-generated insights directly in an interactive web dashboard.
 
 ---
 
 ## ✨ Features
 
 ### 🎞️ Shot Change Detection
-Detects scene transitions and shot boundaries within a video, helping users understand video structure and navigate content efficiently.
+Detects scene transitions and shot boundaries, helping users understand the structure of a video.
 
 ### 👤 Face Detection
-Identifies human faces appearing in the video and provides information about their occurrence throughout the footage.
+Identifies human faces appearing throughout the video.
 
 ### 🏷️ Logo Detection
-Recognizes brand logos present in video frames — useful for marketing analysis, sponsorship tracking, and brand monitoring.
+Recognizes brand logos for sponsorship tracking, marketing analysis, and brand monitoring.
 
 ### 📦 Object Detection
-Detects and classifies various objects appearing in the video, enabling deeper content understanding and categorization.
+Detects and classifies objects appearing in the video to improve content understanding.
+
+### ☁️ Cloud-Based Delivery
+Uploads the annotated video to Cloudinary and delivers it through a secure public URL for seamless viewing.
 
 ---
 
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
-|---|---|
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | Core backend language |
-| ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white) | Web framework |
-| ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white) | Video frame processing |
-| ![Google Cloud](https://img.shields.io/badge/Google_Video_Intelligence-4285F4?style=flat&logo=google-cloud&logoColor=white) | AI video analysis |
-| ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=flat&logo=cloudinary&logoColor=white) | Cloud video storage & management |
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Frontend interface |
+|--------|------------|
+| Backend | Python, Flask |
+| Computer Vision | OpenCV |
+| AI Video Analysis | Google Cloud Video Intelligence API |
+| Cloud Storage & Delivery | Cloudinary |
+| Frontend | HTML5, CSS3, JavaScript |
 
 ---
 
 ## ⚙️ System Workflow
 
-```
+```text
 User Uploads Video
        │
        ▼
-┌─────────────────┐
-│   Cloudinary    │  ← Secure video upload & management
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│ Google Video Intelligence   │  ← AI-powered content analysis
-└────────────┬────────────────┘
-             │
-             ▼
-┌─────────────────┐
-│    OpenCV       │  ← Frame-level processing
-└────────┬────────┘
-         │
-         ▼
-┌──────────────────────────────────────────────┐
-│         Detection & Extraction               │
-│  Shot Changes │ Faces │ Logos │ Objects      │
-└────────────────────────┬─────────────────────┘
-                         │
-                         ▼
-             Interactive Results Dashboard
+┌────────────────────────┐
+│     Flask Backend      │
+└───────────┬────────────┘
+            │
+            ▼
+┌────────────────────────┐
+│ Local Storage          │
+│ (Temporary Upload)     │
+└───────────┬────────────┘
+            │
+            ▼
+┌────────────────────────────────────┐
+│ Google Cloud Video Intelligence API│
+│ AI Video Analysis                  │
+└───────────┬────────────────────────┘
+            │
+            ▼
+┌────────────────────────┐
+│ OpenCV                 │
+│ Frame Annotation       │
+│ (Bounding Boxes)       │
+└───────────┬────────────┘
+            │
+            ▼
+┌────────────────────────┐
+│ Annotated Video        │
+│ Saved Locally          │
+└───────────┬────────────┘
+            │
+            ▼
+┌────────────────────────┐
+│ Cloudinary             │
+│ Upload & Public URL    │
+└───────────┬────────────┘
+            │
+            ▼
+┌────────────────────────┐
+│ Interactive Dashboard  │
+│ Render Results         │
+└────────────────────────┘
 ```
 
-1. **Upload** — User uploads a video through the web interface.
-2. **Store** — The video is processed and securely managed using Cloudinary.
-3. **Analyze** — Google Video Intelligence API analyzes the video content.
-4. **Process** — OpenCV performs additional video frame processing.
-5. **Extract** — Detection results are extracted and organized.
-6. **Interpret** — The platform generates meaningful insights from the analyzed video.
-7. **Display** — Results are shown to the user through an interactive dashboard.
+---
 
+## 🔄 Workflow Explanation
+
+- **Upload** — The user uploads a video through the web interface.
+- **Store Locally** — Flask temporarily saves the uploaded video for processing.
+- **Analyze** — Google Cloud Video Intelligence API extracts AI annotations such as shot changes, faces, logos, and objects.
+- **Annotate** — OpenCV overlays bounding boxes and labels onto detected elements within the video.
+- **Save** — The annotated video is generated and stored locally.
+- **Upload** — The processed video is uploaded to Cloudinary, which generates a secure public URL.
+- **Display** — Flask renders the Cloudinary-hosted annotated video along with the AI analysis results in an interactive dashboard.
+
+---
+
+## 📷 Screenshots
+
+> **Add screenshots here**
+
+### 🏠 Home Page
+
+![Home](Screenshots/hm-1.jpg)
+
+### ✨ Features
+
+![Upload](Screenshots/feat.jpg)
+
+
+![Dashboard](Screenshots/footer.jpg)
+
+### 🎥 Results
+
+![Annotated Video](Screenshots/facedetection.jpg)
+
+![Annotated Video](Screenshots/od.jpg)
+
+![Annotated Video](Screenshots/sd.jpg)
 ---
 
 ## 💡 Applications
 
 | Domain | Use Case |
-|---|---|
-| 📺 Media & Broadcasting | Video content analysis & monitoring |
-| 📣 Marketing | Brand visibility tracking & sponsorship analytics |
-| 📚 Education | Educational video analysis & indexing |
-| 🗂️ Content Management | Automated tagging and categorization |
-| 🔬 Research | Computer vision & video intelligence projects |
-| 📊 Digital Marketing | Campaign performance analytics |
+|---------|----------|
+| 📺 Media & Broadcasting | Video content monitoring |
+| 📣 Marketing | Brand visibility and sponsorship tracking |
+| 📚 Education | Educational video indexing and analysis |
+| 🗂️ Content Management | Automated video tagging and categorization |
+| 🔬 Research | Computer vision and AI experimentation |
+| 📊 Digital Marketing | Campaign performance analysis |
+
+---
+
+## 🏆 Key Highlights
+
+- AI-powered video analysis platform
+- Automated shot change detection
+- Face detection
+- Logo recognition
+- Object detection
+- Frame annotation using OpenCV
+- Cloud-hosted annotated video delivery
+- Interactive Flask dashboard
+- Integration of multiple cloud services
+- End-to-end automated video processing workflow
 
 ---
 
 ## ⚠️ Challenges Faced
 
-- 🔍 Selecting the most suitable cloud service for large-scale video processing.
-- 🔄 Designing an efficient workflow for handling video uploads and analysis.
-- 🎯 Improving the accuracy and relevance of generated analysis results.
-- 🔗 Integrating multiple services while maintaining smooth application performance.
+- Selecting the appropriate cloud service for large-scale video analysis.
+- Designing an efficient processing pipeline for uploaded videos.
+- Synchronizing Google Cloud annotations with OpenCV frame rendering.
+- Integrating Cloudinary for efficient delivery of processed videos.
+- Maintaining smooth performance while processing large video files.
 
 ---
 
 ## 🚀 Future Enhancements
 
-- [ ] 📝 Video summarization
-- [ ] 😊 Emotion detection
-- [ ] 🎙️ Speech-to-text transcription
-- [ ] 🔑 Keyword extraction
-- [ ] 🌐 Multi-language support
-- [ ] ⚡ Real-time video analytics
-- [ ] 📊 Advanced reporting dashboard
+- 📝 AI-powered video summarization
+- 😊 Emotion detection
+- 🎙️ Speech-to-text transcription
+- 🔑 Keyword extraction
+- 🌐 Multi-language support
+- ⚡ Real-time video analytics
+- 📊 Advanced reporting dashboard
+- 🤖 Generative AI-based video insights
+
+---
+
+## 🚀 Installation
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/MetaVid.git
+
+# Navigate into project
+cd MetaVid
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run application
+python app.py
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+MetaVid/
+│
+├── app.py
+├── uploads/
+├── annotated_videos/
+├── static/
+├── templates/
+├── requirements.txt
+├── README.md
+└── ...
+```
 
 ---
 
 ## 👨‍💻 Author
 
-> Developed as a computer vision and video intelligence project focused on transforming raw video content into meaningful insights using AI and cloud technologies.
+Developed as a computer vision and AI-powered video intelligence project focused on transforming raw video content into meaningful insights using modern cloud technologies.
 
 ---
 
-<div align="center">
+## ⭐ If you found this project useful, consider giving it a star!
 
-Made with ❤️ using
-[![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat&logo=google-cloud&logoColor=white)](https://cloud.google.com)
-[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white)](https://opencv.org)
-[![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=flat&logo=cloudinary&logoColor=white)](https://cloudinary.com)
-
-</div>
+Made with ❤️ using **Python • Flask • OpenCV • Google Cloud Video Intelligence API • Cloudinary**
